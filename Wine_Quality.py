@@ -54,7 +54,7 @@ random_forest = RandomForestClassifier(n_estimators=200)
 random_forest .fit(X_train, y_train)
 ##Predicting the value of test set using the trained model
 y_pred_rf= random_forest.predict(X_test)
-##Confusion Matrix to see the accuracy of the model and it turns out to be 92.5%
+##Confusion Matrix to see the accuracy of the model and it turns out to be 91%
 confusion_matrix = confusion_matrix(y_test, y_pred_rf)
 
 y_pred_rf
@@ -63,7 +63,8 @@ print(confusion_matrix)
 svc = SVC()
 svc.fit(X_train, y_train)
 y_pred_svc = svc.predict(X_test)
-##Confusion Matrix for the SVM mmodel with acuuracy 91.5%
+##Confusion Matrix for the SVM mmodel with acuuracy 91%, 
+##but with higher number of true positives and lesser true negatives
 cm_svc=confusion_matrix(y_test, y_pred_svc)
 print(cm_svc)
 91
